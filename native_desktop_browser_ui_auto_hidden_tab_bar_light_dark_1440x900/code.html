@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sakura Browser - Native Desktop Browser UI (Light &amp; Dark)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 32px;
+      background-color: #E5E7EB;
+      color: #15171C;
+      -webkit-font-smoothing: antialiased;
+    }
+    .floating-bar-shadow-light {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .floating-bar-shadow-dark {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .window-frame-shadow {
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.06);
+    }
+    .window-frame-shadow-dark {
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+    /* Native desktop scrollbar subtle styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 9999px;
+    }
+    .dark-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body class="min-w-fit">
+<!-- Header Header / Canvas Label -->
+<div class="max-w-[2960px] mx-auto mb-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#F4A9C5] flex items-center justify-center text-[#B63E6C] font-semibold text-lg">
+<i class="w-5 h-5 text-[#B63E6C]" data-lucide="compass"></i>
+</div>
+<div>
+<h1 class="text-xl font-bold text-gray-900 tracking-tight">Sakura Browser — Native Desktop UI</h1>
+<p class="text-xs text-gray-500 font-medium">1440×900 Native Windows • 4px Grid • Auto-Hidden Tab Bar (4px Sliver) • Edge-to-Edge Immersive Canvas</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-gray-600">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-[#B63E6C]"></span> Sakura Palette Tokens
+      </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
+<i class="w-3.5 h-3.5" data-lucide="layout-grid"></i> Strict 4px Spacing
+      </span>
+</div>
+</div>
+<!-- Side-by-Side Presentation Container -->
+<div class="flex flex-col 2xl:flex-row gap-8 items-start justify-center">
+<!-- ========================================== -->
+<!-- 1. LIGHT MODE WINDOW (1440 × 900)           -->
+<!-- ========================================== -->
+<div class="flex flex-col items-center">
+<div class="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
+<i class="w-4 h-4 text-amber-500" data-lucide="sun"></i> Light Mode (1440 × 900)
+      </div>
+<div class="w-[1440px] h-[900px] bg-[#F7F8FA] rounded-xl overflow-hidden flex flex-col window-frame-shadow border border-[#E4E6EB] relative select-none">
+<!-- Native macOS / Desktop Window Titlebar (integrated height: 36px) -->
+<div class="h-9 px-4 bg-[#F7F8FA] border-b border-[#E4E6EB] flex items-center justify-between text-xs text-[#15171C]">
+<!-- Window Controls (Traffic Lights) -->
+<div class="flex items-center gap-2 w-[224px]"><div class="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]/50"></div><div class="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]/50"></div><div class="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]/50"></div><button class="ml-2 p-1 rounded hover:bg-gray-200/60 text-gray-500 hover:text-[#B63E6C] transition-colors" title="Expand Tab Strip (⌘S)"><i class="w-3.5 h-3.5" data-lucide="panel-left-open"></i></button><span class="ml-1 text-[11px] font-medium text-gray-400">Sakura</span></div>
+<!-- Window Title Bar subtle indicator -->
+<div class="text-[11px] font-medium text-gray-500 tracking-tight flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B63E6C]"></span> Design Systems Architecture — Linear Guides
+          </div>
+<!-- Right Window Utility Actions -->
+<div class="flex items-center gap-3 text-gray-400">
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-600" data-lucide="panel-left"></i>
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-600" data-lucide="split-square-vertical"></i>
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-600" data-lucide="more-horizontal"></i>
+</div>
+</div>
+<!-- Main Workspace: Vertical Sidebar + Web View -->
+<div class="flex-1 flex overflow-hidden relative">
+<!-- 240px Vertical Tab Bar (Left Sidebar) -->
+<div class="w-1 h-full bg-[#F4A9C5]/40 hover:bg-[#B63E6C] transition-all cursor-pointer relative group shrink-0 z-30" title="Hover or click to reveal vertical tab bar (⌘S)"><div class="absolute left-1.5 top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white border border-[#E4E6EB] shadow-sm rounded-md px-2 py-1 flex items-center gap-1.5 text-[11px] font-medium text-gray-700 pointer-events-none whitespace-nowrap z-30"><i class="w-3.5 h-3.5 text-[#B63E6C]" data-lucide="panel-left-open"></i><span>Expand Tabs (⌘S)</span></div></div>
+<!-- Main Content Viewport (Generic Web Page + Floating Arc Command Bar) -->
+<main class="flex-1 bg-white relative flex flex-col overflow-hidden">
+<!-- Floating Command Bar (Arc Style) Overlay -->
+<div class="absolute top-4 left-6 right-6 z-30 flex items-center justify-between pointer-events-none">
+<!-- Floating Command Bar Container -->
+<div class="flex items-center gap-3 pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-2 rounded-full border border-[#E4E6EB] floating-bar-shadow-light w-full max-w-[820px] mx-auto transition-all">
+<!-- Circular Navigation Buttons (Back, Forward, Reload) -->
+<div class="flex items-center gap-1.5 pl-0.5">
+<!-- Back button -->
+<button class="w-7 h-7 rounded-full bg-[#F7F8FA] hover:bg-[#E4E6EB] flex items-center justify-center text-gray-700 transition-colors" title="Back (⌘[)">
+<i class="w-3.5 h-3.5" data-lucide="arrow-left"></i>
+</button>
+<!-- Forward button -->
+<button class="w-7 h-7 rounded-full bg-[#F7F8FA] hover:bg-[#E4E6EB] flex items-center justify-center text-gray-400 cursor-not-allowed transition-colors" title="Forward (⌘])">
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</button>
+<!-- Reload button -->
+<button class="w-7 h-7 rounded-full bg-[#F7F8FA] hover:bg-[#FCEFF5] hover:text-[#B63E6C] flex items-center justify-center text-gray-700 transition-colors" title="Reload (⌘R)">
+<i class="w-3.5 h-3.5" data-lucide="rotate-cw"></i>
+</button>
+</div>
+<!-- 1px Vertical Separator -->
+<div class="w-[1px] h-4 bg-[#E4E6EB]"></div>
+<!-- Pill-Shaped Address Bar / Search Input -->
+<div class="flex-1 flex items-center justify-between bg-[#F7F8FA] border border-[#E4E6EB] focus-within:border-[#B63E6C] focus-within:ring-2 focus-within:ring-[#F4A9C5]/40 rounded-full px-3.5 py-1.5 transition-all">
+<div class="flex items-center gap-2 text-xs truncate flex-1">
+<i class="w-3.5 h-3.5 text-emerald-600 shrink-0" data-lucide="lock"></i>
+<span class="text-[#B63E6C] font-medium shrink-0">linear.app</span>
+<span class="text-gray-400">/guides/design-systems-architecture</span>
+</div>
+<div class="flex items-center gap-2 text-gray-400 shrink-0 pl-2">
+<span class="text-[10px] font-mono bg-white border border-[#E4E6EB] px-1.5 py-0.5 rounded text-gray-500 shadow-2xs">⌘K</span>
+<button class="hover:text-gray-700">
+<i class="w-3.5 h-3.5 text-[#B63E6C] fill-[#F4A9C5]" data-lucide="star"></i>
+</button>
+<button class="hover:text-gray-700">
+<i class="w-3.5 h-3.5" data-lucide="share"></i>
+</button>
+</div>
+</div>
+<!-- Right Quick Utility Actions -->
+<div class="flex items-center gap-1.5 pr-0.5">
+<button class="w-7 h-7 rounded-full bg-[#F7F8FA] hover:bg-gray-200 flex items-center justify-center text-gray-600" title="Extensions">
+<i class="w-3.5 h-3.5" data-lucide="puzzle"></i>
+</button>
+<button class="w-7 h-7 rounded-full bg-[#FCEFF5] text-[#B63E6C] hover:bg-[#F4A9C5]/40 flex items-center justify-center" title="Capture / Notes">
+<i class="w-3.5 h-3.5 text-[#B63E6C]" data-lucide="sparkles"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Generic Web Page Content (Scrollable Area) -->
+<div class="flex-1 overflow-y-auto pt-24 px-12 pb-16 max-w-4xl mx-auto w-full">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-xs text-gray-400 mb-6 font-medium">
+<span>Guides</span>
+<i class="w-3 h-3 text-gray-300" data-lucide="chevron-right"></i>
+<span>Foundations</span>
+<i class="w-3 h-3 text-gray-300" data-lucide="chevron-right"></i>
+<span class="text-[#B63E6C]">Design Systems</span>
+</div>
+<!-- Article Header -->
+<h2 class="text-3xl font-extrabold text-[#15171C] tracking-tight mb-3">
+                Building Resilient Design Systems at Scale
+              </h2>
+<p class="text-base text-gray-500 mb-8 leading-relaxed">
+                A pragmatic approach to token hierarchies, 4px spatial rhythm, multi-theme token parity, and component contracts across native platforms.
+              </p>
+<!-- Meta info strip -->
+<div class="flex items-center gap-4 py-3 border-y border-[#E4E6EB] mb-8 text-xs text-gray-500">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-[10px] font-bold text-gray-700">SK</div>
+<span class="font-medium text-gray-800">Sarah K. Miller</span>
+</div>
+<span>•</span>
+<span>October 24, 2024</span>
+<span>•</span>
+<span>8 min read</span>
+<div class="ml-auto flex items-center gap-2">
+<span class="px-2 py-0.5 bg-[#FCEFF5] text-[#B63E6C] rounded-full font-semibold text-[11px]">Foundations</span>
+</div>
+</div>
+<!-- Generic Web Content Body -->
+<div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+<p>
+                  Tokens are the atomic design decisions of your interface. By grounding all spacing in an immutable 4px grid and standardizing corner radius tokens (<code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs text-[#B63E6C] font-mono">radius-4</code>, <code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs text-[#B63E6C] font-mono">radius-6</code>, <code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs text-[#B63E6C] font-mono">radius-8</code>, <code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs text-[#B63E6C] font-mono">radius-12</code>, <code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs text-[#B63E6C] font-mono">radius-full</code>), engineers and designers maintain absolute parity.
+                </p>
+<!-- Visual Mock Component inside Web Page -->
+<div class="p-5 rounded-xl border border-[#E4E6EB] bg-[#F7F8FA] space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-500">Token Architecture Blueprint</span>
+<span class="text-xs text-[#B63E6C] font-medium cursor-pointer">Export Schema →</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 bg-white rounded-lg border border-[#E4E6EB]">
+<div class="text-[11px] font-medium text-gray-400">Color Seed</div>
+<div class="text-sm font-bold text-[#15171C] mt-1 flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#F4A9C5] border border-[#B63E6C]"></span> Sakura #B63E6C
+                      </div>
+</div>
+<div class="p-3 bg-white rounded-lg border border-[#E4E6EB]">
+<div class="text-[11px] font-medium text-gray-400">Base Grid</div>
+<div class="text-sm font-bold text-[#15171C] mt-1">4px Incremental</div>
+</div>
+<div class="p-3 bg-white rounded-lg border border-[#E4E6EB]">
+<div class="text-[11px] font-medium text-gray-400">Surface Neutral</div>
+<div class="text-sm font-bold text-[#15171C] mt-1">#FFFFFF / #F7F8FA</div>
+</div>
+</div>
+</div>
+<p>
+                  Floating command layers demand subtle depth without visual clutter. By employing an elevation shadow of <code class="px-1.5 py-0.5 bg-gray-100 rounded text-xs font-mono">0 4px 16px rgba(0,0,0,.08)</code>, the navigation bar hovers harmoniously over page content while retaining distinct physical boundaries.
+                </p>
+</div>
+</div>
+</main>
+</div>
+<!-- Desktop Window Bottom Status Bar (24px) -->
+<div class="h-6 px-3 bg-[#F7F8FA] border-t border-[#E4E6EB] flex items-center justify-between text-[10px] text-gray-500">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Connected</span>
+<span>https://linear.app/guides/design-systems-architecture</span>
+</div>
+<div class="flex items-center gap-3">
+<span>Zoom 100%</span>
+<span>UTF-8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- 2. DARK MODE WINDOW (1440 × 900)            -->
+<!-- ========================================== -->
+<div class="flex flex-col items-center">
+<div class="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
+<i class="w-4 h-4 text-purple-400" data-lucide="moon"></i> Dark Mode (1440 × 900)
+      </div>
+<div class="w-[1440px] h-[900px] bg-[#0E0F12] rounded-xl overflow-hidden flex flex-col window-frame-shadow-dark border border-[#2B1A22] relative select-none">
+<!-- Native Desktop Window Titlebar (Integrated: 36px) -->
+<div class="h-9 px-4 bg-[#0E0F12] border-b border-[#23262E] flex items-center justify-between text-xs text-[#F2F3F5]">
+<!-- Window Controls (Traffic Lights) -->
+<div class="flex items-center gap-2 w-[224px]"><div class="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]/50"></div><div class="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]/50"></div><div class="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]/50"></div><button class="ml-2 p-1 rounded hover:bg-[#1F2126] text-gray-400 hover:text-[#F7BBD4] transition-colors" title="Expand Tab Strip (⌘S)"><i class="w-3.5 h-3.5" data-lucide="panel-left-open"></i></button><span class="ml-1 text-[11px] font-medium text-gray-500">Sakura</span></div>
+<!-- Window Title Bar subtle indicator -->
+<div class="text-[11px] font-medium text-gray-400 tracking-tight flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#E88FB2]"></span> Design Systems Architecture — Linear Guides
+          </div>
+<!-- Right Window Utility Actions -->
+<div class="flex items-center gap-3 text-gray-500">
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-300" data-lucide="panel-left"></i>
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-300" data-lucide="split-square-vertical"></i>
+<i class="w-3.5 h-3.5 cursor-pointer hover:text-gray-300" data-lucide="more-horizontal"></i>
+</div>
+</div>
+<!-- Main Workspace: Vertical Sidebar + Web View -->
+<div class="flex-1 flex overflow-hidden relative">
+<!-- 240px Vertical Tab Bar (Left Sidebar Dark) -->
+<div class="w-1 h-full bg-[#E88FB2]/30 hover:bg-[#E88FB2] transition-all cursor-pointer relative group shrink-0 z-30" title="Hover or click to reveal vertical tab bar (⌘S)"><div class="absolute left-1.5 top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-[#1F2126] border border-[#2E323D] shadow-sm rounded-md px-2 py-1 flex items-center gap-1.5 text-[11px] font-medium text-gray-200 pointer-events-none whitespace-nowrap z-30"><i class="w-3.5 h-3.5 text-[#F7BBD4]" data-lucide="panel-left-open"></i><span>Expand Tabs (⌘S)</span></div></div>
+<!-- Main Content Viewport Dark -->
+<main class="flex-1 bg-[#17181C] relative flex flex-col overflow-hidden">
+<!-- Floating Command Bar (Arc Style Dark) -->
+<div class="absolute top-4 left-6 right-6 z-30 flex items-center justify-between pointer-events-none">
+<!-- Floating Command Bar Container Dark (Elevated #1F2126) -->
+<div class="flex items-center gap-3 pointer-events-auto bg-[#1F2126]/95 backdrop-blur-md px-3 py-2 rounded-full border border-[#2B2E38] floating-bar-shadow-dark w-full max-w-[820px] mx-auto transition-all">
+<!-- Circular Navigation Buttons Dark -->
+<div class="flex items-center gap-1.5 pl-0.5">
+<!-- Back button -->
+<button class="w-7 h-7 rounded-full bg-[#17181C] hover:bg-[#282B33] flex items-center justify-center text-[#F2F3F5] transition-colors" title="Back (⌘[)">
+<i class="w-3.5 h-3.5" data-lucide="arrow-left"></i>
+</button>
+<!-- Forward button -->
+<button class="w-7 h-7 rounded-full bg-[#17181C] hover:bg-[#282B33] flex items-center justify-center text-gray-600 cursor-not-allowed transition-colors" title="Forward (⌘])">
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</button>
+<!-- Reload button -->
+<button class="w-7 h-7 rounded-full bg-[#17181C] hover:bg-[#2B1A22] hover:text-[#F7BBD4] flex items-center justify-center text-[#F2F3F5] transition-colors" title="Reload (⌘R)">
+<i class="w-3.5 h-3.5" data-lucide="rotate-cw"></i>
+</button>
+</div>
+<!-- 1px Vertical Separator -->
+<div class="w-[1px] h-4 bg-[#2E323D]"></div>
+<!-- Pill-Shaped Address Bar / Search Input Dark -->
+<div class="flex-1 flex items-center justify-between bg-[#17181C] border border-[#2B2E38] focus-within:border-[#E88FB2] focus-within:ring-2 focus-within:ring-[#E88FB2]/30 rounded-full px-3.5 py-1.5 transition-all">
+<div class="flex items-center gap-2 text-xs truncate flex-1">
+<i class="w-3.5 h-3.5 text-emerald-400 shrink-0" data-lucide="lock"></i>
+<span class="text-[#F7BBD4] font-medium shrink-0">linear.app</span>
+<span class="text-gray-400">/guides/design-systems-architecture</span>
+</div>
+<div class="flex items-center gap-2 text-gray-500 shrink-0 pl-2">
+<span class="text-[10px] font-mono bg-[#1F2126] border border-[#2E323D] px-1.5 py-0.5 rounded text-gray-400 shadow-2xs">⌘K</span>
+<button class="hover:text-gray-300">
+<i class="w-3.5 h-3.5 text-[#E88FB2] fill-[#E88FB2]" data-lucide="star"></i>
+</button>
+<button class="hover:text-gray-300">
+<i class="w-3.5 h-3.5" data-lucide="share"></i>
+</button>
+</div>
+</div>
+<!-- Right Quick Utility Actions Dark -->
+<div class="flex items-center gap-1.5 pr-0.5">
+<button class="w-7 h-7 rounded-full bg-[#17181C] hover:bg-[#282B33] flex items-center justify-center text-gray-400 hover:text-gray-200" title="Extensions">
+<i class="w-3.5 h-3.5" data-lucide="puzzle"></i>
+</button>
+<button class="w-7 h-7 rounded-full bg-[#2B1A22] text-[#F7BBD4] border border-[#E88FB2]/40 hover:bg-[#3D2530] flex items-center justify-center" title="Capture / Notes">
+<i class="w-3.5 h-3.5 text-[#F7BBD4]" data-lucide="sparkles"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Generic Web Page Content Dark (Scrollable Area) -->
+<div class="flex-1 overflow-y-auto pt-24 px-12 pb-16 max-w-4xl mx-auto w-full dark-scroll">
+<!-- Breadcrumb Dark -->
+<div class="flex items-center gap-2 text-xs text-gray-500 mb-6 font-medium">
+<span>Guides</span>
+<i class="w-3 h-3 text-gray-600" data-lucide="chevron-right"></i>
+<span>Foundations</span>
+<i class="w-3 h-3 text-gray-600" data-lucide="chevron-right"></i>
+<span class="text-[#F7BBD4]">Design Systems</span>
+</div>
+<!-- Article Header Dark -->
+<h2 class="text-3xl font-extrabold text-[#F2F3F5] tracking-tight mb-3">
+                Building Resilient Design Systems at Scale
+              </h2>
+<p class="text-base text-gray-400 mb-8 leading-relaxed">
+                A pragmatic approach to token hierarchies, 4px spatial rhythm, multi-theme token parity, and component contracts across native platforms.
+              </p>
+<!-- Meta info strip Dark -->
+<div class="flex items-center gap-4 py-3 border-y border-[#23262E] mb-8 text-xs text-gray-400">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-[#1F2126] border border-[#2E323D] flex items-center justify-center text-[10px] font-bold text-gray-300">SK</div>
+<span class="font-medium text-gray-200">Sarah K. Miller</span>
+</div>
+<span>•</span>
+<span>October 24, 2024</span>
+<span>•</span>
+<span>8 min read</span>
+<div class="ml-auto flex items-center gap-2">
+<span class="px-2 py-0.5 bg-[#2B1A22] text-[#F7BBD4] border border-[#E88FB2]/30 rounded-full font-semibold text-[11px]">Foundations</span>
+</div>
+</div>
+<!-- Generic Web Content Body Dark -->
+<div class="space-y-6 text-sm text-gray-300 leading-relaxed">
+<p>
+                  Tokens are the atomic design decisions of your interface. By grounding all spacing in an immutable 4px grid and standardizing corner radius tokens (<code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs text-[#F7BBD4] font-mono">radius-4</code>, <code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs text-[#F7BBD4] font-mono">radius-6</code>, <code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs text-[#F7BBD4] font-mono">radius-8</code>, <code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs text-[#F7BBD4] font-mono">radius-12</code>, <code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs text-[#F7BBD4] font-mono">radius-full</code>), engineers and designers maintain absolute parity.
+                </p>
+<!-- Visual Mock Component inside Web Page Dark -->
+<div class="p-5 rounded-xl border border-[#23262E] bg-[#0E0F12] space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-400">Token Architecture Blueprint</span>
+<span class="text-xs text-[#F7BBD4] font-medium cursor-pointer">Export Schema →</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 bg-[#17181C] rounded-lg border border-[#23262E]">
+<div class="text-[11px] font-medium text-gray-500">Color Seed</div>
+<div class="text-sm font-bold text-[#F2F3F5] mt-1 flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#E88FB2] border border-[#F7BBD4]"></span> Dark #E88FB2
+                      </div>
+</div>
+<div class="p-3 bg-[#17181C] rounded-lg border border-[#23262E]">
+<div class="text-[11px] font-medium text-gray-500">Base Grid</div>
+<div class="text-sm font-bold text-[#F2F3F5] mt-1">4px Incremental</div>
+</div>
+<div class="p-3 bg-[#17181C] rounded-lg border border-[#23262E]">
+<div class="text-[11px] font-medium text-gray-500">Surface Neutral</div>
+<div class="text-sm font-bold text-[#F2F3F5] mt-1">#17181C / #0E0F12</div>
+</div>
+</div>
+</div>
+<p>
+                  Floating command layers demand subtle depth without visual clutter. By employing an elevation shadow of <code class="px-1.5 py-0.5 bg-[#1F2126] border border-[#2E323D] rounded text-xs font-mono">0 4px 16px rgba(0,0,0,.45)</code>, the navigation bar hovers harmoniously over page content while retaining distinct physical boundaries.
+                </p>
+</div>
+</div>
+</main>
+</div>
+<!-- Desktop Window Bottom Status Bar Dark (24px) -->
+<div class="h-6 px-3 bg-[#0E0F12] border-t border-[#23262E] flex items-center justify-between text-[10px] text-gray-500">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Connected</span>
+<span class="text-gray-400">https://linear.app/guides/design-systems-architecture</span>
+</div>
+<div class="flex items-center gap-3">
+<span>Zoom 100%</span>
+<span>UTF-8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
