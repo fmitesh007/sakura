@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#f9f9ff","on-primary":"#ffffff","secondary-container":"#fdb1cd","on-surface-variant":"#564147","surface-container-lowest":"#ffffff","outline":"#897177","inverse-primary":"#ffb1c7","primary-fixed":"#ffd9e2","surface-variant":"#e2e2e9","on-secondary":"#ffffff","on-tertiary-container":"#f5e9ef","surface-tint":"#a63260","on-surface":"#1a1b21","on-secondary-fixed":"#380920","tertiary-container":"#71686d","surface":"#f9f9ff","on-primary-fixed-variant":"#871748","inverse-on-surface":"#f0f0f7","tertiary-fixed-dim":"#cfc3c9","surface-container-high":"#e8e7ef","primary":"#962554","on-tertiary":"#ffffff","on-error-container":"#93000a","on-error":"#ffffff","inverse-surface":"#2e3036","secondary-fixed-dim":"#fdb1cd","error-container":"#ffdad6","primary-container":"#b63e6c","on-secondary-fixed-variant":"#6c344c","surface-container-highest":"#e2e2e9","on-primary-container":"#ffe5eb","surface-bright":"#f9f9ff","on-background":"#1a1b21","tertiary":"#585055","on-tertiary-fixed-variant":"#4c4549","error":"#ba1a1a","surface-dim":"#d9d9e0","secondary":"#884c64","on-primary-fixed":"#3f001c","on-tertiary-fixed":"#201a1e","surface-container-low":"#f3f3fa","on-secondary-container":"#7a4058","primary-fixed-dim":"#ffb1c7","outline-variant":"#dcbfc6","secondary-fixed":"#ffd9e5","surface-container":"#ededf4","tertiary-fixed":"#ecdfe5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","space-sm":"0.5rem","gutter":"0.5rem","margin":"0.75rem","space-xs":"0.25rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"body-md":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"code-sm":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.012em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[15px]">filter_vintage</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Sakura OS</span></div><span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">v2.4.0</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Architecture Modules</div><nav class="mt-space-xs flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="app-frame" href="#"><span class="material-symbols-outlined text-[18px]">aspect_ratio</span><span class="font-body-md text-body-md">App Frame</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="omnibox" href="#"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-md text-body-md">Omnibox</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="tab-strip" href="#"><span class="material-symbols-outlined text-[18px]">tab</span><span class="font-body-md text-body-md">Tab Strip</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dock" href="#"><span class="material-symbols-outlined text-[18px]">dock_to_left</span><span class="font-body-md text-body-md">Dock</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overlays" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-body-md text-body-md">Overlays</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="state-matrix-and-fallbacks" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_comfy</span><span class="font-body-md text-body-md">State Matrix</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></a></nav></div></div><div class="p-space-md bg-surface-container"><div class="flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Target Engine</span><span class="font-body-sm text-body-sm text-on-surface">WebKit / Blink</span></div><span class="material-symbols-outlined text-outline text-[20px]">verified</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-on-surface transition-colors cursor-pointer">Sakura UI</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="hover:text-on-surface transition-colors cursor-pointer">Desktop Architecture</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="font-label-sm text-label-sm text-on-surface">Living Spec</span></div><div class="h-4 w-px bg-surface-container-high"></div><nav class="flex items-center gap-space-xs bg-surface-container-low p-0.5 rounded" data-active-classes="bg-surface-container-high text-on-surface font-label-md rounded"><a class="px-space-md py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="spec-mode" href="#">Spec Mode</a><a class="px-space-md py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="matrix-view" href="#">Matrix View</a><a class="px-space-md py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="token-inspector" href="#">Token Inspector</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[15px]">routine</span><span>Target: WebKit / Blink</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[15px]">light_mode</span><span class="text-[10px] text-outline">/</span><span class="material-symbols-outlined text-[15px]">dark_mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-14 flex-1 bg-surface w-full px-space-lg"><div class="flex flex-col w-full">
+<!-- Document Metadata & Technical Header -->
+<header class="py-space-xl px-space-lg flex flex-col gap-space-md bg-surface-container-low rounded-xl mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>DS-SPEC 09 // SYSTEM RESILIENCE & FALLBACK MATRIX · CHROMIUM 128 CORE</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>SPEC ENGINE: WEBKIT-BLINK IPC DUAL-RENDER</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">System States & Fallbacks Specification Sheet (Light & Dark Mode)</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl">
+        Exhaustive dual-theme fallback and lifecycle states across core browser architectural modules: Vertical Tab Strip, Persistent Sidebar List, and Settings Preference Views. Calibrated for headless Chromium runtime fallbacks and local storage resilience.
+      </p>
+</div>
+<!-- Architectural Badges & Constraint Manifest -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">grid_view</span>
+<span>4 States × 3 Core Modules</span>
+</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">straighten</span>
+<span>Strict 4px Spatial Grid</span>
+</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+<span>WCAG AAA Contrast Verified</span>
+</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">contrast</span>
+<span>Synchronized Light/Dark Render</span>
+</span>
+</div>
+</header>
+<!-- Interactive State Navigator Toolbar -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded-lg mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-xs">Filter State:</span>
+<button class="state-filter-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm transition-all" data-target="all" onclick="filterState('all')">All States (12x2)</button>
+<button class="state-filter-btn px-space-sm py-1 rounded bg-surface text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-target="loading" onclick="filterState('loading')">Loading (01)</button>
+<button class="state-filter-btn px-space-sm py-1 rounded bg-surface text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-target="empty" onclick="filterState('empty')">Empty (02)</button>
+<button class="state-filter-btn px-space-sm py-1 rounded bg-surface text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-target="error" onclick="filterState('error')">Error (03)</button>
+<button class="state-filter-btn px-space-sm py-1 rounded bg-surface text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-target="offline" onclick="filterState('offline')">Offline (04)</button>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-code-sm text-code-sm">
+<span>Layout Mode: Split Side-By-Side</span>
+<span class="inline-block w-1 h-3 bg-outline-variant"></span>
+<span>Sync State: Strict Parity</span>
+</div>
+</div>
+<!-- Dual Environment Canvas: Side-By-Side Comparison Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-xl w-full mb-space-xl">
+<!-- ========================================== -->
+<!-- LEFT COLUMN: LIGHT MODE ENVIRONMENT        -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-lg p-space-lg rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Light Mode Environment</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-sm py-0.5 rounded">
+<span>Surface: #FFFFFF</span>
+<span class="text-outline">/</span>
+<span>Canvas: #F7F8FA</span>
+<span class="text-outline">/</span>
+<span>Accent: #B63E6C</span>
+</div>
+</div>
+<!-- COMPONENT 01: VERTICAL TAB STRIP (LIGHT) -->
+<div class="component-card flex flex-col gap-space-md bg-surface p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-primary font-bold">MOD.01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Vertical Tab Strip</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-low px-space-xs py-0.5 rounded">Target: w-60 (240px)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center justify-between">
+<span>01. Loading</span>
+<span class="font-code-sm text-[10px] text-primary">role="status"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Workspaces</span>
+<span class="material-symbols-outlined text-outline text-[16px]">add</span>
+</div>
+<div aria-live="polite" class="flex-1 flex flex-col items-center justify-center gap-space-xs">
+<svg class="animate-spin w-6 h-6 text-primary-container" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" fill="currentColor"></path>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Restoring session tabs...</span>
+<span class="font-code-sm text-[10px] text-outline">IPC buffer sync</span>
+</div>
+<div class="h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-2/3 rounded-full animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center justify-between">
+<span>02. Empty</span>
+<span class="font-code-sm text-[10px] text-outline">aria-live="polite"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Tabs (0)</span>
+<button class="w-6 h-6 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface text-[15px]">add</span>
+</button>
+</div>
+<div class="flex-1 rounded flex flex-col items-center justify-center p-space-xs text-center bg-surface-container-low/50">
+<span class="material-symbols-outlined text-outline text-[22px] mb-1">tab</span>
+<span class="font-label-md text-label-md text-on-surface">No tabs open</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant leading-tight mt-1">Press ⌘T to open a new tab or restore previous session</p>
+</div>
+<button class="w-full py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors text-center">
+                + New Tab
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center justify-between">
+<span>03. Error</span>
+<span class="font-code-sm text-[10px] text-error">role="alert"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Workspaces</span>
+<span class="font-code-sm text-[10px] px-1 bg-error-container text-on-error-container rounded">ERR_TAB_ALLOC</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Failed to load workspace</span>
+<span class="font-code-sm text-[11px] text-on-surface-variant mt-0.5">Heap memory allocation error</span>
+</div>
+<button class="w-full py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 flex items-center justify-center gap-space-xs transition-opacity">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Retry Session</span>
+</button>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center justify-between">
+<span>04. Offline</span>
+<span class="font-code-sm text-[10px] text-tertiary">aria-live="polite"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Tabs (Local)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">cloud_off</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">You're offline</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-1 leading-snug">Cached tab previews available in local storage</p>
+</div>
+<div class="p-1 rounded bg-surface-container flex items-center justify-center gap-space-xs text-on-surface-variant font-code-sm text-[10px]">
+<span class="material-symbols-outlined text-[12px]">folder</span>
+<span>8 Local Snapshots Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPONENT 02: SIDEBAR LIST (LIGHT) -->
+<div class="component-card flex flex-col gap-space-md bg-surface p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-primary font-bold">MOD.02</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sidebar List (Bookmarks & Panes)</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-low px-space-xs py-0.5 rounded">Target: 220px–240px</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center justify-between">
+<span>01. Loading (Shimmer)</span>
+<span class="font-code-sm text-[10px] text-primary">w-60%, 80%, 40%</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Bookmarks Tree</span>
+<span class="material-symbols-outlined text-outline text-[16px]">sync</span>
+</div>
+<div aria-busy="true" class="flex flex-col gap-space-sm py-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-high animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-high rounded w-[60%] animate-pulse"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-high animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-high rounded w-[80%] animate-pulse"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-high animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-high rounded w-[40%] animate-pulse"></div>
+</div>
+</div>
+<div class="font-code-sm text-[10px] text-outline text-right">Rendering node tree...</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">02. Empty</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Bookmarks</span>
+<span class="material-symbols-outlined text-outline text-[16px]">bookmark_border</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-outline text-[18px]">bookmark_border</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">No bookmarks yet</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-0.5">Star pages or drag URLs here to save</p>
+</div>
+<button class="w-full py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+                Import bookmarks...
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">03. Error</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Sync Manager</span>
+<span class="material-symbols-outlined text-error text-[16px]">sync_problem</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-error text-[24px] mb-1">error</span>
+<span class="font-label-md text-label-md text-on-surface">Sync unreachable</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-0.5">Chromium sync transport timeout</p>
+</div>
+<button class="w-full py-1.5 rounded bg-primary text-on-primary hover:opacity-90 font-label-sm text-label-sm flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Retry Sync</span>
+</button>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">04. Offline</span>
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Bookmarks</span>
+<span class="font-code-sm text-[10px] text-on-surface-variant bg-surface-container px-1 py-0.5 rounded">Cached</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-tertiary text-[22px] mb-1">cloud_off</span>
+<span class="font-label-md text-label-md text-on-surface">Offline Mode</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-0.5">Viewing cached bookmarks only. Cloud sync paused.</p>
+</div>
+<div class="p-1 rounded bg-surface-container flex items-center justify-between px-space-sm font-code-sm text-[10px] text-on-surface-variant">
+<span>IndexedDB: OK</span>
+<span class="text-primary font-medium">Queue: 4 items</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPONENT 03: SETTINGS PREFERENCE VIEW (LIGHT) -->
+<div class="component-card flex flex-col gap-space-md bg-surface p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-primary font-bold">MOD.03</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Settings Page (Preferences View)</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-low px-space-xs py-0.5 rounded">Target: 280px–340px</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">01. Loading</span>
+<div class="w-full h-48 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Privacy & Security</span>
+<span class="material-symbols-outlined text-outline text-[16px]">tune</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center animate-spin">
+<span class="material-symbols-outlined text-primary text-[18px]">progress_activity</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Loading preferences...</span>
+<div class="w-3/4 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-1/2 animate-pulse"></div>
+</div>
+</div>
+<div class="flex gap-space-xs">
+<div class="h-6 flex-1 bg-surface-container rounded animate-pulse"></div>
+<div class="h-6 flex-1 bg-surface-container rounded animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">02. Empty</span>
+<div class="w-full h-48 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Search Results</span>
+<span class="material-symbols-outlined text-outline text-[16px]">search</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-outline text-[18px]">tune</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Nothing here yet</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-1 leading-snug">No settings match your query or active filter criteria</p>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors">
+                Reset filters
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">03. Error</span>
+<div class="w-full h-48 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Configuration Error</span>
+<span class="font-code-sm text-[10px] text-error">CRITICAL</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-error text-[22px] mb-1">error_outline</span>
+<span class="font-label-md text-label-md text-on-surface">Unable to read config</span>
+<span class="font-code-sm text-[10px] bg-error-container text-on-error-container px-1 py-0.5 rounded mt-1 font-mono">ERR_PREFS_CORRUPT_JSON</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 py-1 rounded bg-surface-container text-on-surface text-center font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+                  Restore defaults
+                </button>
+<button class="py-1 px-space-sm rounded bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                  Retry
+                </button>
+</div>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">04. Offline</span>
+<div class="w-full h-48 rounded-lg bg-surface-container-lowest p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Profile Sync</span>
+<span class="material-symbols-outlined text-outline text-[16px]">cloud_off</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-tertiary text-[22px] mb-1">wifi_off</span>
+<span class="font-label-md text-label-md text-on-surface">Cloud preferences unavailable</span>
+<p class="font-code-sm text-[11px] text-on-surface-variant mt-1 leading-snug">Changes will be saved locally and synced once reconnected.</p>
+</div>
+<div class="py-1 px-space-sm rounded bg-surface-container flex items-center justify-between font-code-sm text-[10px] text-on-surface-variant">
+<span>Pending mutations</span>
+<span class="font-bold text-on-surface">0 local edits</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- RIGHT COLUMN: DARK MODE ENVIRONMENT       -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-lg p-space-lg rounded-xl bg-inverse-surface shadow-sm text-inverse-on-surface">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">Dark Mode Environment</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-tertiary-fixed-dim bg-surface-container-highest/20 px-space-sm py-0.5 rounded">
+<span>Surface: #18191E</span>
+<span class="text-outline">/</span>
+<span>Canvas: #0E0F12</span>
+<span class="text-outline">/</span>
+<span>Accent: #F7BBD4</span>
+</div>
+</div>
+<!-- COMPONENT 01: VERTICAL TAB STRIP (DARK) -->
+<div class="component-card flex flex-col gap-space-md bg-surface-container-highest/10 p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim font-bold">MOD.01</span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">Vertical Tab Strip</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed-dim bg-surface-container-highest/30 px-space-xs py-0.5 rounded">Target: w-60 (240px)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider flex items-center justify-between">
+<span>01. Loading</span>
+<span class="font-code-sm text-[10px] text-secondary-fixed-dim">role="status"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Workspaces</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">add</span>
+</div>
+<div aria-live="polite" class="flex-1 flex flex-col items-center justify-center gap-space-xs">
+<svg class="animate-spin w-6 h-6 text-secondary-fixed-dim" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" fill="currentColor"></path>
+</svg>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Restoring session tabs...</span>
+<span class="font-code-sm text-[10px] text-outline-variant">IPC buffer sync</span>
+</div>
+<div class="h-1 bg-surface-container-highest/30 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim w-2/3 rounded-full animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider flex items-center justify-between">
+<span>02. Empty</span>
+<span class="font-code-sm text-[10px] text-outline-variant">aria-live="polite"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Tabs (0)</span>
+<button class="w-6 h-6 rounded flex items-center justify-center bg-surface-container-highest/30 hover:bg-surface-container-highest/50 transition-colors">
+<span class="material-symbols-outlined text-inverse-on-surface text-[15px]">add</span>
+</button>
+</div>
+<div class="flex-1 rounded flex flex-col items-center justify-center p-space-xs text-center bg-surface-container-highest/10">
+<span class="material-symbols-outlined text-outline-variant text-[22px] mb-1">tab</span>
+<span class="font-label-md text-label-md text-inverse-on-surface">No tabs open</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim leading-tight mt-1">Press ⌘T to open a new tab or restore previous session</p>
+</div>
+<button class="w-full py-1 rounded bg-surface-container-highest/30 text-secondary-fixed-dim font-label-sm text-label-sm hover:bg-surface-container-highest/50 transition-colors text-center">
+                + New Tab
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider flex items-center justify-between">
+<span>03. Error</span>
+<span class="font-code-sm text-[10px] text-error-container">role="alert"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Workspaces</span>
+<span class="font-code-sm text-[10px] px-1 bg-on-error-container/40 text-error-container rounded">ERR_TAB_ALLOC</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-on-error-container/40 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-error-container text-[18px]">warning</span>
+</div>
+<span class="font-label-md text-label-md text-inverse-on-surface">Failed to load workspace</span>
+<span class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-0.5">Heap memory allocation error</span>
+</div>
+<button class="w-full py-1.5 rounded bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm hover:opacity-90 flex items-center justify-center gap-space-xs transition-opacity">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Retry Session</span>
+</button>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider flex items-center justify-between">
+<span>04. Offline</span>
+<span class="font-code-sm text-[10px] text-outline-variant">aria-live="polite"</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Tabs (Local)</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-outline-variant text-[18px]">cloud_off</span>
+</div>
+<span class="font-label-md text-label-md text-inverse-on-surface">You're offline</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-1 leading-snug">Cached tab previews available in local storage</p>
+</div>
+<div class="p-1 rounded bg-surface-container-highest/20 flex items-center justify-center gap-space-xs text-tertiary-fixed-dim font-code-sm text-[10px]">
+<span class="material-symbols-outlined text-[12px]">folder</span>
+<span>8 Local Snapshots Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPONENT 02: SIDEBAR LIST (DARK) -->
+<div class="component-card flex flex-col gap-space-md bg-surface-container-highest/10 p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim font-bold">MOD.02</span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">Sidebar List (Bookmarks & Panes)</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed-dim bg-surface-container-highest/30 px-space-xs py-0.5 rounded">Target: 220px–240px</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider flex items-center justify-between">
+<span>01. Loading (Shimmer)</span>
+<span class="font-code-sm text-[10px] text-secondary-fixed-dim">w-60%, 80%, 40%</span>
+</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Bookmarks Tree</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">sync</span>
+</div>
+<div aria-busy="true" class="flex flex-col gap-space-sm py-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-highest/40 animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-highest/40 rounded w-[60%] animate-pulse"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-highest/40 animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-highest/40 rounded w-[80%] animate-pulse"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-4 h-4 rounded bg-surface-container-highest/40 animate-pulse"></div>
+<div class="h-3.5 bg-surface-container-highest/40 rounded w-[40%] animate-pulse"></div>
+</div>
+</div>
+<div class="font-code-sm text-[10px] text-outline-variant text-right">Rendering node tree...</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">02. Empty</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Bookmarks</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">bookmark_border</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-outline-variant text-[18px]">bookmark_border</span>
+</div>
+<span class="font-label-md text-label-md text-inverse-on-surface">No bookmarks yet</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-0.5">Star pages or drag URLs here to save</p>
+</div>
+<button class="w-full py-1 rounded bg-surface-container-highest/30 text-inverse-on-surface hover:bg-surface-container-highest/50 font-label-sm text-label-sm transition-colors">
+                Import bookmarks...
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">03. Error</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Sync Manager</span>
+<span class="material-symbols-outlined text-error-container text-[16px]">sync_problem</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-error-container text-[24px] mb-1">error</span>
+<span class="font-label-md text-label-md text-inverse-on-surface">Sync unreachable</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-0.5">Chromium sync transport timeout</p>
+</div>
+<button class="w-full py-1.5 rounded bg-secondary-fixed-dim text-on-secondary-fixed hover:opacity-90 font-label-sm text-label-sm flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Retry Sync</span>
+</button>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">04. Offline</span>
+<div class="w-full h-44 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Bookmarks</span>
+<span class="font-code-sm text-[10px] text-tertiary-fixed-dim bg-surface-container-highest/30 px-1 py-0.5 rounded">Cached</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-outline-variant text-[22px] mb-1">cloud_off</span>
+<span class="font-label-md text-label-md text-inverse-on-surface">Offline Mode</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-0.5">Viewing cached bookmarks only. Cloud sync paused.</p>
+</div>
+<div class="p-1 rounded bg-surface-container-highest/20 flex items-center justify-between px-space-sm font-code-sm text-[10px] text-tertiary-fixed-dim">
+<span>IndexedDB: OK</span>
+<span class="text-secondary-fixed-dim font-medium">Queue: 4 items</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPONENT 03: SETTINGS PREFERENCE VIEW (DARK) -->
+<div class="component-card flex flex-col gap-space-md bg-surface-container-highest/10 p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim font-bold">MOD.03</span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">Settings Page (Preferences View)</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed-dim bg-surface-container-highest/30 px-space-xs py-0.5 rounded">Target: 280px–340px</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- State 1: Loading -->
+<div class="state-block flex flex-col gap-space-xs" data-state="loading">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">01. Loading</span>
+<div class="w-full h-48 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Privacy & Security</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">tune</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest/20 flex items-center justify-center animate-spin">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">progress_activity</span>
+</div>
+<span class="font-label-md text-label-md text-inverse-on-surface">Loading preferences...</span>
+<div class="w-3/4 h-2 bg-surface-container-highest/30 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim w-1/2 animate-pulse"></div>
+</div>
+</div>
+<div class="flex gap-space-xs">
+<div class="h-6 flex-1 bg-surface-container-highest/20 rounded animate-pulse"></div>
+<div class="h-6 flex-1 bg-surface-container-highest/20 rounded animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- State 2: Empty -->
+<div class="state-block flex flex-col gap-space-xs" data-state="empty">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">02. Empty</span>
+<div class="w-full h-48 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Search Results</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">search</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-outline-variant text-[18px]">tune</span>
+</div>
+<span class="font-label-md text-label-md text-inverse-on-surface">Nothing here yet</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-1 leading-snug">No settings match your query or active filter criteria</p>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-highest/30 hover:bg-surface-container-highest/50 text-secondary-fixed-dim font-label-sm text-label-sm transition-colors">
+                Reset filters
+              </button>
+</div>
+</div>
+<!-- State 3: Error -->
+<div class="state-block flex flex-col gap-space-xs" data-state="error">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">03. Error</span>
+<div class="w-full h-48 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Configuration Error</span>
+<span class="font-code-sm text-[10px] text-error-container">CRITICAL</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-error-container text-[22px] mb-1">error_outline</span>
+<span class="font-label-md text-label-md text-inverse-on-surface">Unable to read config</span>
+<span class="font-code-sm text-[10px] bg-on-error-container/40 text-error-container px-1 py-0.5 rounded mt-1 font-mono">ERR_PREFS_CORRUPT_JSON</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 py-1 rounded bg-surface-container-highest/30 text-inverse-on-surface text-center font-label-sm text-label-sm hover:bg-surface-container-highest/50 transition-colors">
+                  Restore defaults
+                </button>
+<button class="py-1 px-space-sm rounded bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                  Retry
+                </button>
+</div>
+</div>
+</div>
+<!-- State 4: Offline -->
+<div class="state-block flex flex-col gap-space-xs" data-state="offline">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">04. Offline</span>
+<div class="w-full h-48 rounded-lg bg-inverse-surface/80 p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-medium">Profile Sync</span>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">cloud_off</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-space-xs text-center">
+<span class="material-symbols-outlined text-outline-variant text-[22px] mb-1">wifi_off</span>
+<span class="font-label-md text-label-md text-inverse-on-surface">Cloud preferences unavailable</span>
+<p class="font-code-sm text-[11px] text-tertiary-fixed-dim mt-1 leading-snug">Changes will be saved locally and synced once reconnected.</p>
+</div>
+<div class="py-1 px-space-sm rounded bg-surface-container-highest/20 flex items-center justify-between font-code-sm text-[10px] text-tertiary-fixed-dim">
+<span>Pending mutations</span>
+<span class="font-bold text-inverse-on-surface">0 local edits</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Reference Matrix: Architectural State Transition & Accessibility Schema -->
+<section class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl mb-space-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">schema</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Architectural State Transition & Recovery Schema</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">SPEC SECTION: IPC-LIFECYCLE-884</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="p-space-sm rounded-l">Component Type</th>
+<th class="p-space-sm">State</th>
+<th class="p-space-sm">Trigger Event</th>
+<th class="p-space-sm">Recovery Action</th>
+<th class="p-space-sm rounded-r">Accessibility Contract</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40">
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Vertical Tab Strip</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-code-sm text-[11px]">Loading</span></td>
+<td class="p-space-sm text-on-surface-variant">Session restore IPC call dispatched</td>
+<td class="p-space-sm">Auto-resolve on DOM node binding completion</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">role="status", aria-live="polite", aria-busy="true"</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Vertical Tab Strip</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-outline font-code-sm text-[11px]">Empty</span></td>
+<td class="p-space-sm text-on-surface-variant">Active tab array length === 0</td>
+<td class="p-space-sm">Inject default blank tab or focus Omnibox shortcut (⌘T)</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-label="No active tabs", focus trapped on "+ New Tab"</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Vertical Tab Strip</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-[11px]">Error</span></td>
+<td class="p-space-sm text-on-surface-variant">ERR_TAB_ALLOC / Tab workspace crash</td>
+<td class="p-space-sm">Manual or automatic IPC channel restart via "Retry" button</td>
+<td class="p-space-sm font-code-sm text-[11px] text-error">role="alert", aria-live="assertive", focus locked to retry CTA</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Vertical Tab Strip</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-code-sm text-[11px]">Offline</span></td>
+<td class="p-space-sm text-on-surface-variant">navigator.onLine === false</td>
+<td class="p-space-sm">Hydrate tab renderers from disk cache and IndexedDB thumbnails</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">role="status", aria-live="polite", announce offline capability</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Sidebar List</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-code-sm text-[11px]">Loading</span></td>
+<td class="p-space-sm text-on-surface-variant">Sync DB SQLite query in-flight</td>
+<td class="p-space-sm">Shimmer render sequence (60% → 80% → 40%)</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-busy="true", aria-label="Loading bookmarks..."</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Sidebar List</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-outline font-code-sm text-[11px]">Empty</span></td>
+<td class="p-space-sm text-on-surface-variant">Empty database record list</td>
+<td class="p-space-sm">Display "Import bookmarks..." file picker trigger</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-live="polite", CTA provides explicit action label</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Sidebar List</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-[11px]">Error</span></td>
+<td class="p-space-sm text-on-surface-variant">Remote sync socket connection refused</td>
+<td class="p-space-sm">Exponential backoff reconnection + user "Retry Sync" trigger</td>
+<td class="p-space-sm font-code-sm text-[11px] text-error">role="alert", aria-live="assertive", announce sync failure</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Sidebar List</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-code-sm text-[11px]">Offline</span></td>
+<td class="p-space-sm text-on-surface-variant">Network disconnect / WebSocket timeout</td>
+<td class="p-space-sm">Switch to local-first cache mode; queue remote push mutations</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-live="polite", announce offline cached items active</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Settings View</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-code-sm text-[11px]">Loading</span></td>
+<td class="p-space-sm text-on-surface-variant">Preferences partition parsing</td>
+<td class="p-space-sm">Indeterminate spin with section placeholder pulse</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">role="status", aria-live="polite"</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Settings View</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-outline font-code-sm text-[11px]">Empty</span></td>
+<td class="p-space-sm text-on-surface-variant">Search query yields 0 matching tokens</td>
+<td class="p-space-sm">Provide "Reset filters" to clear input query value</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-live="polite", announce query result count</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Settings View</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-[11px]">Error</span></td>
+<td class="p-space-sm text-on-surface-variant">ERR_PREFS_CORRUPT_JSON</td>
+<td class="p-space-sm">Fallback to factory default template with backup rename</td>
+<td class="p-space-sm font-code-sm text-[11px] text-error">role="alert", aria-live="assertive", announce recovery choice</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-sm font-medium">Settings View</td>
+<td class="p-space-sm"><span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-code-sm text-[11px]">Offline</span></td>
+<td class="p-space-sm text-on-surface-variant">Cloud sync broker unreachable</td>
+<td class="p-space-sm">Commit preference edits directly to local profile partition</td>
+<td class="p-space-sm font-code-sm text-[11px] text-on-surface-variant">aria-live="polite", announce offline preference storage</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Technical Token Annotation Drawer -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-space-md mb-space-lg">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Animation Tokens</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Shimmer & Spin</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">1.2s cubic-bezier(0.4, 0, 0.6, 1)</span>
+<span class="font-code-sm text-[11px] text-outline mt-1">Skeleton width specs: 60% / 80% / 40%</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Error Semantics</span>
+<span class="font-headline-sm text-headline-sm text-error">#DC2626 / #F87171</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">Light: #DC2626 · Dark: #F87171</span>
+<span class="font-code-sm text-[11px] text-outline mt-1">High-contrast alert badge containers</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Offline State Tokens</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">#6B7280 / #9CA3AF</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">Neutral mute across chrome layers</span>
+<span class="font-code-sm text-[11px] text-outline mt-1">Local snapshot visual markers</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Brand Accent Tokens</span>
+<span class="font-headline-sm text-headline-sm text-primary">#B63E6C / #F7BBD4</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">Sakura Core Interactive Tint</span>
+<span class="font-code-sm text-[11px] text-outline mt-1">Primary action & active state rings</span>
+</div>
+</section>
+<!-- Interactive JavaScript Controller -->
+<script>
+    function filterState(selectedState) {
+      const stateBlocks = document.querySelectorAll('.state-block');
+      const filterButtons = document.querySelectorAll('.state-filter-btn');
+
+      filterButtons.forEach(btn => {
+        if (btn.getAttribute('data-target') === selectedState) {
+          btn.classList.remove('bg-surface', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary');
+        } else {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-surface', 'text-on-surface-variant');
+        }
+      });
+
+      stateBlocks.forEach(block => {
+        if (selectedState === 'all' || block.getAttribute('data-state') === selectedState) {
+          block.style.display = 'flex';
+          block.classList.remove('opacity-20');
+        } else {
+          block.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-sm px-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm"><div><span>Sakura Core Engine Spec Sheet</span><span class="mx-space-xs text-outline">|</span><span>Architecture: Unified IPC / Chromium Embedded Framework & WebKitGTK Layer</span></div><div class="flex items-center gap-space-md"><span>IPC Latency: < 0.4ms</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Display Sync: DirectComposition / Metal</span></div></div></footer></div></body></html>

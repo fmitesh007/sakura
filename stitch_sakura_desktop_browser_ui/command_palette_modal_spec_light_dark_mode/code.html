@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed-variant":"#4c4549","on-background":"#1a1b21","tertiary":"#585055","tertiary-fixed":"#ecdfe5","on-error-container":"#93000a","on-primary-fixed-variant":"#871748","on-secondary-fixed":"#380920","on-secondary":"#ffffff","primary":"#962554","secondary":"#884c64","error":"#ba1a1a","surface-dim":"#d9d9e0","error-container":"#ffdad6","on-primary":"#ffffff","outline-variant":"#dcbfc6","secondary-fixed-dim":"#fdb1cd","on-surface-variant":"#564147","inverse-on-surface":"#f0f0f7","surface-variant":"#e2e2e9","on-tertiary-container":"#f5e9ef","surface-container-high":"#e8e7ef","tertiary-fixed-dim":"#cfc3c9","background":"#f9f9ff","on-tertiary":"#ffffff","on-secondary-container":"#7a4058","on-secondary-fixed-variant":"#6c344c","on-primary-container":"#ffe5eb","secondary-fixed":"#ffd9e5","secondary-container":"#fdb1cd","tertiary-container":"#71686d","inverse-surface":"#2e3036","surface-container-lowest":"#ffffff","surface":"#f9f9ff","surface-bright":"#f9f9ff","surface-container":"#ededf4","primary-container":"#b63e6c","primary-fixed-dim":"#ffb1c7","on-primary-fixed":"#3f001c","surface-tint":"#a63260","outline":"#897177","on-tertiary-fixed":"#201a1e","inverse-primary":"#ffb1c7","surface-container-low":"#f3f3fa","primary-fixed":"#ffd9e2","on-surface":"#1a1b21","surface-container-highest":"#e2e2e9","on-error":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"0.75rem","space-xs":"0.25rem","space-md":"0.75rem","space-lg":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","gutter":"0.5rem"},"fontFamily":{"headline-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"code-sm":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.012em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-lg pb-space-lg"><div class="px-space-lg mb-space-lg flex items-center justify-between"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[24px]">filter_vintage</span><span class="font-headline-sm text-headline-sm text-on-surface">Sakura Studio</span></div><span class="px-space-xs py-0.5 rounded text-[10px] font-label-sm bg-primary-container text-on-primary">v2.4</span></div><div class="px-space-md mb-space-md"><div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>Palette Inspector</span><span class="font-code-sm text-primary">⌘+K</span></div></div><nav class="flex-1 px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary font-label-md text-label-md" data-path="command-palette-dual-spec" href="#"><span class="material-symbols-outlined text-[20px]">view_carousel</span><span class="font-label-md text-label-md">Dual 1440x900</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="light-mode-architecture" href="#"><span class="material-symbols-outlined text-[20px]">light_mode</span><span class="font-label-md text-label-md">Light Frame</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dark-mode-architecture" href="#"><span class="material-symbols-outlined text-[20px]">dark_mode</span><span class="font-label-md text-label-md">Dark Frame</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tokens-and-keybindings" href="#"><span class="material-symbols-outlined text-[20px]">keyboard</span><span class="font-label-md text-label-md">Hotkeys & Index</span></a></nav><div class="px-space-lg pt-space-md border-t border-surface-variant flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><span class="font-label-sm text-label-sm text-on-surface-variant">Canvas Sync OK</span></div><span class="material-symbols-outlined text-[18px] text-outline">settings</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Command Palette Design System</span><span class="font-label-sm text-label-sm text-on-surface-variant">• Dual Window Render Engine</span></div><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-14 bg-surface min-h-[calc(100vh-56px)]"><div class="flex flex-col w-full">
+<!-- Top Spec Bar & System Context -->
+<section class="px-space-xl py-space-lg bg-surface-container-low flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-primary-container text-on-primary uppercase tracking-wider">Canvas Spec v2.4</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">FRAME // 1440 × 900 DUAL VIEWPORT</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface">Sakura Desktop Command Palette (HUD / Modal Elevation 3)</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+        Side-by-side verification of Level 3 elevated palette modal across Light (<code class="bg-surface-container px-1 py-0.5 rounded text-primary">#F7F8FA</code> canvas) and Dark (<code class="bg-surface-container px-1 py-0.5 rounded text-primary">#0E0F12</code> canvas) architectures. Demonstrating calibrated 35% black scrim (<code class="bg-surface-container px-1 py-0.5 rounded text-primary">rgba(0,0,0,0.35)</code>), 44px omni-input, and 36px contextual rows with Sakura accent alignment bars.
+      </p>
+</div>
+<!-- Live Toggle / Metrics Quick Strip -->
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">aspect_ratio</span>
+<span class="font-label-sm text-label-sm text-on-surface">560 × 480 px</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">blur_on</span>
+<span class="font-label-sm text-label-sm text-on-surface">35% Scrim + 4px Blur</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">palette</span>
+<span class="font-label-sm text-label-sm text-on-surface">Light & Dark Side-by-Side</span>
+</div>
+</div>
+</section>
+<!-- Dual Viewports Presentation Canvas -->
+<section class="p-space-xl space-y-space-xl">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-xl">
+<!-- ==========================================
+           WINDOW 01: LIGHT MODE SPECIFICATION
+           ========================================== -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Window 01: Light Architecture</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-space-xs py-0.5 rounded">Light Surface</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">1440 × 900 Canvas Scaled</span>
+</div>
+<!-- Simulated 1440x900 OS Window Outer Frame -->
+<div class="relative w-full aspect-[16/10] min-h-[580px] bg-[#F7F8FA] rounded-xl overflow-hidden shadow-xl flex flex-col select-none">
+<!-- macOS Native Window Chrome / Titlebar -->
+<div class="h-10 bg-[#FFFFFF] px-4 flex items-center justify-between shrink-0 shadow-sm relative z-10">
+<!-- Traffic Lights -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#FF5F56] shadow-inner"></span>
+<span class="w-3 h-3 rounded-full bg-[#FFBD2E] shadow-inner"></span>
+<span class="w-3 h-3 rounded-full bg-[#27C93F] shadow-inner"></span>
+</div>
+<!-- Tab Strip Mini Preview -->
+<div class="flex items-center gap-1.5 h-7">
+<div class="bg-[#F7F8FA] px-3 py-1 rounded-t-md flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">filter_vintage</span>
+<span class="font-label-sm text-label-sm text-[#1A1B21]">Sakura Workspaces</span>
+<span class="material-symbols-outlined text-[12px] text-outline">close</span>
+</div>
+<div class="px-2 py-1 flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span class="font-label-sm text-label-sm">Linear Canvas</span>
+</div>
+</div>
+<!-- Window Right Controls -->
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">waves</span>
+<span class="material-symbols-outlined text-[16px]">splitscreen</span>
+</div>
+</div>
+<!-- Omnibox Toolbar (44px) -->
+<div class="h-11 bg-[#FFFFFF] px-4 flex items-center gap-3 shrink-0 shadow-sm relative z-10">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="material-symbols-outlined text-[18px] opacity-40">arrow_forward</span>
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</div>
+<div class="flex-1 h-8 bg-[#F7F8FA] rounded-md px-3 flex items-center justify-between text-body-sm font-body-sm shadow-inner">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span class="font-medium text-[#1A1B21]">sakura://workspace/design-system</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">extension</span>
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">S</span>
+</div>
+</div>
+<!-- Underlying Webpage Content (Simulated Dashboard Background) -->
+<div class="flex-1 p-6 overflow-hidden bg-[#F7F8FA] grid grid-cols-12 gap-4">
+<div class="col-span-3 bg-[#FFFFFF] rounded-lg p-4 shadow-sm space-y-3">
+<div class="h-4 w-24 bg-surface-variant rounded"></div>
+<div class="h-8 w-full bg-surface-container rounded"></div>
+<div class="h-8 w-full bg-surface-container rounded"></div>
+<div class="h-8 w-full bg-surface-container rounded"></div>
+<div class="pt-4">
+<div class="h-28 w-full bg-secondary-fixed/40 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[32px]">filter_vintage</span>
+</div>
+</div>
+</div>
+<div class="col-span-9 space-y-4">
+<div class="bg-[#FFFFFF] rounded-lg p-5 shadow-sm space-y-3">
+<div class="h-6 w-48 bg-surface-variant rounded"></div>
+<div class="h-4 w-full bg-surface-container rounded"></div>
+<div class="h-4 w-3/4 bg-surface-container rounded"></div>
+<div class="grid grid-cols-3 gap-3 pt-2">
+<div class="h-20 bg-surface-container-low rounded p-2">
+<span class="font-label-sm text-label-sm text-primary">Active Tabs</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">18 Nodes</p>
+</div>
+<div class="h-20 bg-surface-container-low rounded p-2">
+<span class="font-label-sm text-label-sm text-secondary">Split Panes</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">4 Live</p>
+</div>
+<div class="h-20 bg-surface-container-low rounded p-2">
+<span class="font-label-sm text-label-sm text-tertiary">Memory</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">1.2 GB</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-36 bg-[#FFFFFF] rounded-lg shadow-sm p-4"></div>
+<div class="h-36 bg-[#FFFFFF] rounded-lg shadow-sm p-4"></div>
+</div>
+</div>
+</div>
+<!-- ==============================================
+               35% BLACK SCRIM OVERLAY (LIGHT WINDOW)
+               ============================================== -->
+<div class="absolute inset-0 bg-black/[0.35] backdrop-blur-[4px] z-20 flex items-center justify-center p-4">
+<!-- Command Palette Modal (Light Mode): w-[560px], max-h-[480px], radius 12px -->
+<div class="w-[560px] max-h-[480px] bg-[#FFFFFF] rounded-[12px] shadow-[0_20px_40px_-8px_rgba(0,0,0,0.2),0_1px_3px_rgba(0,0,0,0.08)] flex flex-col overflow-hidden relative transition-all">
+<!-- Input Area Strictly 44px -->
+<div class="h-[44px] px-4 flex items-center gap-3 shrink-0 bg-[#FFFFFF]">
+<span class="material-symbols-outlined text-[18px] text-[#897177] shrink-0">search</span>
+<input class="flex-1 bg-transparent border-none outline-none font-headline-sm text-headline-sm text-[#1A1B21] placeholder-[#9BA3AF] cursor-default" placeholder="Type a command or search…" readonly="" type="text" value="lin"/>
+<span class="px-1.5 py-0.5 rounded bg-[#F3F3FA] text-[#564147] font-code-sm text-code-sm shadow-sm font-mono">esc</span>
+</div>
+<!-- 1px Subtle Divider (E4E6EB equivalent in theme) -->
+<div class="h-[1px] w-full bg-[#E4E6EB] shrink-0"></div>
+<!-- Results List: Max Height Scrollable -->
+<div class="px-2 py-2 max-h-[380px] overflow-y-auto space-y-1">
+<!-- Section: TABS -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-2 pb-1 text-[#897177] uppercase font-label-sm">
+                  Tabs
+                </div>
+<!-- Row 01 (Selected Active Row in Light Mode) -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative bg-[#FCEFF5] cursor-pointer">
+<!-- Sakura accent 2px vertical pill -->
+<div class="absolute left-0 top-1.5 bottom-1.5 w-[2.5px] bg-[#B63E6C] rounded-r"></div>
+<span class="material-symbols-outlined text-[16px] text-[#B63E6C] shrink-0" style="font-variation-settings: 'FILL' 1;">tab</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md font-medium text-[#1A1B21] truncate">Linear — Design Systems Architecture</span>
+<span class="font-code-sm text-code-sm text-[#871748] bg-[#FFE5EB] px-1.5 py-0.5 rounded font-mono shrink-0">⌘1</span>
+</div>
+</div>
+<!-- Row 02 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#F3F3FA] cursor-pointer text-[#1A1B21]">
+<span class="material-symbols-outlined text-[16px] text-[#564147] shrink-0">tab</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#1A1B21] truncate">GitHub Sakura Web Shell Core</span>
+<span class="font-code-sm text-code-sm text-[#897177] font-mono shrink-0">⌘2</span>
+</div>
+</div>
+<!-- Section: ACTIONS -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-3 pb-1 text-[#897177] uppercase font-label-sm">
+                  Actions
+                </div>
+<!-- Row 03 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#F3F3FA] cursor-pointer text-[#1A1B21]">
+<span class="material-symbols-outlined text-[16px] text-[#564147] shrink-0">splitscreen</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#1A1B21] truncate">Toggle Split View (Side-by-Side)</span>
+<span class="font-code-sm text-code-sm text-[#897177] font-mono shrink-0">⌥⌘S</span>
+</div>
+</div>
+<!-- Row 04 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#F3F3FA] cursor-pointer text-[#1A1B21]">
+<span class="material-symbols-outlined text-[16px] text-[#564147] shrink-0">content_copy</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#1A1B21] truncate">Copy URL as Clean Markdown</span>
+<span class="font-code-sm text-code-sm text-[#897177] font-mono shrink-0">⇧⌘C</span>
+</div>
+</div>
+<!-- Section: HISTORY -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-3 pb-1 text-[#897177] uppercase font-label-sm">
+                  History
+                </div>
+<!-- Row 05 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#F3F3FA] cursor-pointer text-[#1A1B21]">
+<span class="material-symbols-outlined text-[16px] text-[#897177] shrink-0">history</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-body-md text-body-md text-[#564147] truncate">github.com/sakura-browser/token-spec</span>
+<span class="font-label-sm text-label-sm text-[#897177] shrink-0">12m ago</span>
+</div>
+</div>
+</div>
+<!-- Bottom Helper Footer (Strictly h-9) -->
+<div class="h-9 bg-[#F9F9FF] px-3 flex items-center justify-between text-label-sm font-label-sm text-[#564147] shrink-0 shadow-inner">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#EDEDF4] font-mono text-[10px]">↑</kbd>
+<kbd class="px-1 py-0.5 rounded bg-[#EDEDF4] font-mono text-[10px]">↓</kbd>
+<span>Navigate</span>
+</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-[#EDEDF4] font-mono text-[10px]">↵</kbd>
+<span>Select</span>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#EDEDF4] font-mono text-[10px]">esc</kbd>
+<span>Close</span>
+</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#EDEDF4] font-mono text-[10px]">⌘K</kbd>
+<span>Actions</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Light Window Spec Meta Tag -->
+<div class="flex items-center justify-between px-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span>Palette Surface: <strong class="text-on-surface font-mono">#FFFFFF (Elevated Level 3)</strong></span>
+<span>Selected BG: <strong class="text-primary font-mono">#FCEFF5 with #B63E6C bar</strong></span>
+</div>
+</div>
+<!-- ==========================================
+           WINDOW 02: DARK MODE SPECIFICATION
+           ========================================== -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Window 02: Dark Architecture</span>
+<span class="font-label-sm text-label-sm bg-inverse-surface text-inverse-on-surface px-space-xs py-0.5 rounded">Dark Chrome</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">1440 × 900 Canvas Scaled</span>
+</div>
+<!-- Simulated 1440x900 OS Window Outer Frame -->
+<div class="relative w-full aspect-[16/10] min-h-[580px] bg-[#0E0F12] rounded-xl overflow-hidden shadow-2xl flex flex-col select-none">
+<!-- macOS Native Window Chrome / Titlebar -->
+<div class="h-10 bg-[#17181C] px-4 flex items-center justify-between shrink-0 shadow-sm relative z-10">
+<!-- Traffic Lights -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#FF5F56] shadow-inner"></span>
+<span class="w-3 h-3 rounded-full bg-[#FFBD2E] shadow-inner"></span>
+<span class="w-3 h-3 rounded-full bg-[#27C93F] shadow-inner"></span>
+</div>
+<!-- Tab Strip Mini Preview -->
+<div class="flex items-center gap-1.5 h-7">
+<div class="bg-[#1F2126] px-3 py-1 rounded-t-md flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-[#F7BBD4]" style="font-variation-settings: 'FILL' 1;">filter_vintage</span>
+<span class="font-label-sm text-label-sm text-[#F0F0F7]">Sakura Workspaces</span>
+<span class="material-symbols-outlined text-[12px] text-[#897177]">close</span>
+</div>
+<div class="px-2 py-1 flex items-center gap-1.5 text-[#897177]">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span class="font-label-sm text-label-sm">Linear Canvas</span>
+</div>
+</div>
+<!-- Window Right Controls -->
+<div class="flex items-center gap-2 text-[#897177]">
+<span class="material-symbols-outlined text-[16px]">waves</span>
+<span class="material-symbols-outlined text-[16px]">splitscreen</span>
+</div>
+</div>
+<!-- Omnibox Toolbar (44px) -->
+<div class="h-11 bg-[#17181C] px-4 flex items-center gap-3 shrink-0 shadow-sm relative z-10">
+<div class="flex items-center gap-1 text-[#897177]">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="material-symbols-outlined text-[18px] opacity-40">arrow_forward</span>
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</div>
+<div class="flex-1 h-8 bg-[#0E0F12] rounded-md px-3 flex items-center justify-between text-body-sm font-body-sm shadow-inner">
+<div class="flex items-center gap-2 text-[#F0F0F7]">
+<span class="material-symbols-outlined text-[14px] text-[#F7BBD4]">lock</span>
+<span class="font-medium text-[#F0F0F7]">sakura://workspace/design-system</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-[#897177]">star</span>
+</div>
+<div class="flex items-center gap-2 text-[#897177]">
+<span class="material-symbols-outlined text-[18px]">extension</span>
+<span class="w-6 h-6 rounded-full bg-[#B63E6C] text-[#FFFFFF] flex items-center justify-center font-label-sm text-label-sm font-bold">S</span>
+</div>
+</div>
+<!-- Underlying Webpage Content (Simulated Dark Dashboard Background) -->
+<div class="flex-1 p-6 overflow-hidden bg-[#0E0F12] grid grid-cols-12 gap-4">
+<div class="col-span-3 bg-[#17181C] rounded-lg p-4 shadow-sm space-y-3">
+<div class="h-4 w-24 bg-[#282A30] rounded"></div>
+<div class="h-8 w-full bg-[#1F2126] rounded"></div>
+<div class="h-8 w-full bg-[#1F2126] rounded"></div>
+<div class="h-8 w-full bg-[#1F2126] rounded"></div>
+<div class="pt-4">
+<div class="h-28 w-full bg-[#2B1A22] rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[#F7BBD4] text-[32px]">filter_vintage</span>
+</div>
+</div>
+</div>
+<div class="col-span-9 space-y-4">
+<div class="bg-[#17181C] rounded-lg p-5 shadow-sm space-y-3">
+<div class="h-6 w-48 bg-[#282A30] rounded"></div>
+<div class="h-4 w-full bg-[#1F2126] rounded"></div>
+<div class="h-4 w-3/4 bg-[#1F2126] rounded"></div>
+<div class="grid grid-cols-3 gap-3 pt-2">
+<div class="h-20 bg-[#1F2126] rounded p-2">
+<span class="font-label-sm text-label-sm text-[#F7BBD4]">Active Tabs</span>
+<p class="font-headline-sm text-headline-sm text-[#F0F0F7]">18 Nodes</p>
+</div>
+<div class="h-20 bg-[#1F2126] rounded p-2">
+<span class="font-label-sm text-label-sm text-[#FDB1CD]">Split Panes</span>
+<p class="font-headline-sm text-headline-sm text-[#F0F0F7]">4 Live</p>
+</div>
+<div class="h-20 bg-[#1F2126] rounded p-2">
+<span class="font-label-sm text-label-sm text-[#CFC3C9]">Memory</span>
+<p class="font-headline-sm text-headline-sm text-[#F0F0F7]">1.2 GB</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-36 bg-[#17181C] rounded-lg shadow-sm p-4"></div>
+<div class="h-36 bg-[#17181C] rounded-lg shadow-sm p-4"></div>
+</div>
+</div>
+</div>
+<!-- ==============================================
+               35% BLACK SCRIM OVERLAY (DARK WINDOW)
+               ============================================== -->
+<div class="absolute inset-0 bg-black/[0.35] backdrop-blur-[4px] z-20 flex items-center justify-center p-4">
+<!-- Command Palette Modal (Dark Mode): w-[560px], max-h-[480px], radius 12px -->
+<div class="w-[560px] max-h-[480px] bg-[#1E1F25] rounded-[12px] shadow-[0_20px_40px_-8px_rgba(0,0,0,0.6),0_1px_3px_rgba(0,0,0,0.4)] flex flex-col overflow-hidden relative transition-all">
+<!-- Input Area Strictly 44px -->
+<div class="h-[44px] px-4 flex items-center gap-3 shrink-0 bg-[#1E1F25]">
+<span class="material-symbols-outlined text-[18px] text-[#A0A6B2] shrink-0">search</span>
+<input class="flex-1 bg-transparent border-none outline-none font-headline-sm text-headline-sm text-[#F2F3F5] placeholder-[#68707D] cursor-default" placeholder="Type a command or search…" readonly="" type="text" value="spl"/>
+<span class="px-1.5 py-0.5 rounded bg-[#282A30] text-[#A0A6B2] font-code-sm text-code-sm shadow-sm font-mono">esc</span>
+</div>
+<!-- 1px Subtle Divider (#282A30) -->
+<div class="h-[1px] w-full bg-[#282A30] shrink-0"></div>
+<!-- Results List: Max Height Scrollable -->
+<div class="px-2 py-2 max-h-[380px] overflow-y-auto space-y-1">
+<!-- Section: ACTIONS (Selected row inside) -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-2 pb-1 text-[#68707D] uppercase font-label-sm">
+                  Actions
+                </div>
+<!-- Row 01 (Selected Active Row in Dark Mode) -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative bg-[#2B1A22] cursor-pointer">
+<!-- Sakura dark accent 2px vertical pill -->
+<div class="absolute left-0 top-1.5 bottom-1.5 w-[2.5px] bg-[#F7BBD4] rounded-r"></div>
+<span class="material-symbols-outlined text-[16px] text-[#F7BBD4] shrink-0" style="font-variation-settings: 'FILL' 1;">splitscreen</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md font-medium text-[#F2F3F5] truncate">Toggle Split View (Horizontal / Vertical)</span>
+<span class="font-code-sm text-code-sm text-[#F7BBD4] bg-[#471E2D] px-1.5 py-0.5 rounded font-mono shrink-0">⌥⌘S</span>
+</div>
+</div>
+<!-- Row 02 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#282A30] cursor-pointer text-[#F2F3F5]">
+<span class="material-symbols-outlined text-[16px] text-[#A0A6B2] shrink-0">tab_duplicate</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#F2F3F5] truncate">Duplicate Tab in New Workspace</span>
+<span class="font-code-sm text-code-sm text-[#68707D] font-mono shrink-0">⇧⌘D</span>
+</div>
+</div>
+<!-- Section: TABS -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-3 pb-1 text-[#68707D] uppercase font-label-sm">
+                  Tabs
+                </div>
+<!-- Row 03 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#282A30] cursor-pointer text-[#F2F3F5]">
+<span class="material-symbols-outlined text-[16px] text-[#A0A6B2] shrink-0">tab</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#F2F3F5] truncate">Linear — Design Systems Architecture</span>
+<span class="font-code-sm text-code-sm text-[#68707D] font-mono shrink-0">⌘1</span>
+</div>
+</div>
+<!-- Row 04 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#282A30] cursor-pointer text-[#F2F3F5]">
+<span class="material-symbols-outlined text-[16px] text-[#A0A6B2] shrink-0">settings</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-label-md text-label-md text-[#F2F3F5] truncate">Settings: Keyboard Shortcuts & Engine</span>
+<span class="font-code-sm text-code-sm text-[#68707D] font-mono shrink-0">⌘,</span>
+</div>
+</div>
+<!-- Section: HISTORY -->
+<div class="text-[11px] font-semibold tracking-wider px-3 pt-3 pb-1 text-[#68707D] uppercase font-label-sm">
+                  History
+                </div>
+<!-- Row 05 -->
+<div class="h-[36px] flex items-center px-3 rounded-md text-sm gap-3 relative hover:bg-[#282A30] cursor-pointer text-[#F2F3F5]">
+<span class="material-symbols-outlined text-[16px] text-[#68707D] shrink-0">history</span>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<span class="font-body-md text-body-md text-[#A0A6B2] truncate">github.com/sakura/browser/pull/314</span>
+<span class="font-label-sm text-label-sm text-[#68707D] shrink-0">18m ago</span>
+</div>
+</div>
+</div>
+<!-- Bottom Helper Footer (Strictly h-9) -->
+<div class="h-9 bg-[#17181C] px-3 flex items-center justify-between text-label-sm font-label-sm text-[#A0A6B2] shrink-0 shadow-inner">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#282A30] font-mono text-[10px] text-[#F2F3F5]">↑</kbd>
+<kbd class="px-1 py-0.5 rounded bg-[#282A30] font-mono text-[10px] text-[#F2F3F5]">↓</kbd>
+<span>Navigate</span>
+</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-[#282A30] font-mono text-[10px] text-[#F2F3F5]">↵</kbd>
+<span>Select</span>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#282A30] font-mono text-[10px] text-[#F2F3F5]">esc</kbd>
+<span>Close</span>
+</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1 py-0.5 rounded bg-[#282A30] font-mono text-[10px] text-[#F2F3F5]">⌘K</kbd>
+<span>Actions</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dark Window Spec Meta Tag -->
+<div class="flex items-center justify-between px-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span>Palette Surface: <strong class="text-on-surface font-mono">#1E1F25 (Elevated Level 3)</strong></span>
+<span>Selected BG: <strong class="text-primary font-mono">#2B1A22 with #F7BBD4 bar</strong></span>
+</div>
+</div>
+</div>
+<!-- ==============================================
+         DESIGN SYSTEM VERIFICATION MATRIX CARD
+         ============================================== -->
+<div class="bg-surface-container-low rounded-xl p-space-xl shadow-sm space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-semibold">Quality Assurance</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Command Palette Specification & Dimension Audit</h2>
+</div>
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>100% Token Compliance Verified</span>
+</div>
+</div>
+<!-- Verification Grid (Bento Matrix) -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-space-md">
+<!-- 01: Width -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Palette Width</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">560px</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">w-[560px] (Exact)</span>
+</div>
+<!-- 02: Max Height -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max Height</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">480px</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">max-h-[480px]</span>
+</div>
+<!-- 03: Border Radius -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Corner Radius</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">12px</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">rounded-[12px]</span>
+</div>
+<!-- 04: Scrim Depth -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dimmed Scrim</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">35% Black</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">rgba(0,0,0,0.35)</span>
+</div>
+<!-- 05: Input Row -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Omni Input Row</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">44px</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">h-[44px] strict</span>
+</div>
+<!-- 06: Item Height -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Row Item Height</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">36px</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">h-[36px] strict</span>
+</div>
+<!-- 07: Accent Bar -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selected Indicator</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">2.5px Left</div>
+<span class="font-code-sm text-code-sm text-primary block truncate font-mono">#B63E6C / #F7BBD4</span>
+</div>
+</div>
+<!-- Comparative Architecture Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-space-sm px-space-md rounded-l">Layer Element</th>
+<th class="py-space-sm px-space-md">Window 01: Light Specification</th>
+<th class="py-space-sm px-space-md">Window 02: Dark Specification</th>
+<th class="py-space-sm px-space-md rounded-r">Elevation & Focus Rings</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y-0">
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium">Canvas Background</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#F7F8FA (Canvas Level 0)</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#0E0F12 (Canvas Level 0)</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Flat, no shadow</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium">App Chrome & Toolbar</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#FFFFFF / 40px Chrome + 44px Omni</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#17181C / 40px Chrome + 44px Omni</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Level 1 Surface</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium">Modal Elevation (Level 3)</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#FFFFFF + 0 20px 40px -8px rgba(0,0,0,0.2)</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#1E1F25 + 0 20px 40px -8px rgba(0,0,0,0.6)</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Level 3 Modal Surface</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium">Selected Row State</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#FCEFF5 with #B63E6C Accent Bar</td>
+<td class="py-space-sm px-space-md font-mono text-primary">#2B1A22 with #F7BBD4 Accent Bar</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Interactive Aura Accent</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive micro-behavior: enable row hover & click testing directly in preview
+  document.addEventListener('DOMContentLoaded', () => {
+    const listItems = document.querySelectorAll('.max-h-\\[380px\\] > div.cursor-pointer');
+    listItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const parent = item.parentElement;
+        const currentActive = parent.querySelector('[class*="bg-[#FCEFF5]"], [class*="bg-[#2B1A22]"]');
+        if (currentActive && currentActive !== item) {
+          // If we had an accent pill bar, relocate it
+          const accentBar = currentActive.querySelector('.absolute.left-0');
+          if (accentBar) {
+            currentActive.removeChild(accentBar);
+          }
+          currentActive.classList.remove('bg-[#FCEFF5]', 'bg-[#2B1A22]');
+          currentActive.classList.add('hover:bg-[#F3F3FA]', 'hover:bg-[#282A30]');
+        }
+
+        // Determine if light or dark parent
+        const isDark = item.closest('.bg-\\[\\#0E0F12\\]') !== null;
+        item.classList.remove('hover:bg-[#F3F3FA]', 'hover:bg-[#282A30]');
+        
+        if (isDark) {
+          item.classList.add('bg-[#2B1A22]');
+          if (!item.querySelector('.absolute.left-0')) {
+            const bar = document.createElement('div');
+            bar.className = 'absolute left-0 top-1.5 bottom-1.5 w-[2.5px] bg-[#F7BBD4] rounded-r';
+            item.prepend(bar);
+          }
+        } else {
+          item.classList.add('bg-[#FCEFF5]');
+          if (!item.querySelector('.absolute.left-0')) {
+            const bar = document.createElement('div');
+            bar.className = 'absolute left-0 top-1.5 bottom-1.5 w-[2.5px] bg-[#B63E6C] rounded-r';
+            item.prepend(bar);
+          }
+        }
+      });
+    });
+  });
+</script></main></div></body></html>
